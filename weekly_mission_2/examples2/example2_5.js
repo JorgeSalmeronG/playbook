@@ -18,4 +18,7 @@ const myPR = new PullRequest("LaunchX","Mi 1er PR",100)
 console.log(myPR.getInfo())
 
 
+console.log("Ejemplo 5: Atributos con valores por default")
+const myPR2 = new PullRequest("LaunchX","Mi 2nd PR",96)
+console.log(myPR2.getInfo())
 
