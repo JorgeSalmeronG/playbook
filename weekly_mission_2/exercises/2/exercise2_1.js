@@ -58,9 +58,8 @@ const explorers = [
    }
  }
 ]
-
+console.log("Exercise 2.1 | Prints name of explorers in list")
 const exploName = explorers.forEach(item => console.log(item.name))
-//console.log(exploName)
 
 
 
