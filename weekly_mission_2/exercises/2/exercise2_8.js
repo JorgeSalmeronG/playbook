@@ -61,7 +61,7 @@ const explorers = [
 
 //8 Obtén la validación si todos los explorers tienen la propiedad isFinished del onboarding como true. Usa EVERY.
 
-console.log("Example 8. Returns 'true' if each value is 'true'")
+console.log("Example 8. Returns 'true' if all values are 'true'")
 const result = explorers.every((item) => item.missions.onboarding.isFinished === true )
 console.log(result)
 
