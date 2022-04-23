@@ -8,9 +8,13 @@ class UserService {
 		return [user.id, user.username, user.name, "Sin bio"]
 
 	}
-	static updateUserUsername(user1,newName){
-		user1.username = newName
-		return user1
+	static updateUserUsername(user,newName){
+		user.username = newName
+		return user
+	}
+	static getAllUsernames(users){
+		const userUsernames = users.map( (item) => item.username)
+		return userUsernames 
 	}
 }
 module.exports = UserService
