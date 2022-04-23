@@ -19,6 +19,10 @@ describe("Test for UserService", () => {
 		expect(userInfoList[3]).toBe("Sin bio")
 	})
 
-	
+	test("3). Update Username", () => {
+		const user = UserService.create(1,"jorgesalme", "jorge")
+		UserService.updateUserUsername(user,"jorges")
+		expect(user.username).toBe("jorges")
+	})
 })
 
