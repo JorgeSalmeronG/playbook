@@ -11,6 +11,11 @@ app.get('/',(req,res) => {
 	})
 //Inicializar la app
 
+//Se agrega nueva ruta
+app.get('/launchx', (req,res) => {
+	res.send('Bienvenidos a launchx')
+})
+
 app.listen(port, () => {
 	console.log(`example app listening on port ${port}`)
 })
