@@ -1,0 +1,17 @@
+const User = require ('./../services/UserService')
+
+const UserView = class userView{
+
+
+	static createUser(payload){
+		if (payload === null ) {
+			return { error : "payload no existe"}
+		}
+
+//		payload.forEach((item) => {if (item.value == null){return {error: "valor iinvalid"}}
+//	})
+
+
+}
+
+module.exports = UserView
