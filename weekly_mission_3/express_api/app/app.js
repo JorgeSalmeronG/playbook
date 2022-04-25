@@ -25,6 +25,12 @@ app.get('/v1/explorers/:id', (req,res) => {
 	res.status(200).json(explorer)
 })
 
+//POST crea un endpoin que se encarga de crear un explorer
+app.post('/v1/explorers', (req, res) => {
+	console.log(`API explorers POST request ${new Date()}`)
+	const requestBody = req.body //Parámetros del cliente
+	res.status(201).json({message: "Created"})
+})
 
 app.listen(port, ()=> {
 	console.log(`Example app listening on port ${port}`)
