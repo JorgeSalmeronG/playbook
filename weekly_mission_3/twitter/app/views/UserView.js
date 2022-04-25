@@ -7,8 +7,11 @@ const UserView = class userView{
 		if (payload === null ) {
 			return { error : "payload no existe"}
 		}
-		if ( (!payload.username) || (!payload.name) || (!payload.id) ){
+		else if ( (!payload.username) || (!payload.name) || (!payload.id) ){
 			return { error : "necesitan tener un valor válido" }
+		}
+		else {
+			return User.create(payload.id, payload.username, payload.name)
 		}
 	}
 }
