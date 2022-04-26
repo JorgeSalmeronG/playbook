@@ -40,6 +40,15 @@ app.put('/v1/explorers/:id' , (req, res) => {
 	res.status(200).json({message : "Updated"})
 })
 
+//DELETE crea un endpoint para eliminar un explorer
+
+app.delete('/v1/explorers/:id', (req, res) => {
+	console.log(`API explorers DELETE request ${new Date()}`)
+	console.log(`Delete explorer with id ${req.params.id}`)
+	const requestBody = req.body // Parámetros de un cliente
+	res.status(200).json({message: "Deleted"})
+})
+
 
 app.listen(port, ()=> {
 	console.log(`Example app listening on port ${port}`)
