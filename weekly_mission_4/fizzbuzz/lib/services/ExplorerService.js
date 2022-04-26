@@ -10,7 +10,7 @@ class ExplorerService{
 		return this.filterByMission(explorers, mission).length
 	}
 
-	static getExplorersUsernameByMission(explorers,mission){
+	static getExplorersUsernamesByMission(explorers,mission){
 
 		let explorersInMission = this.filterByMission(explorers, mission)
 		let usernamesInMission = explorersInMission.map( (explorer) => explorer.githubUsername)
