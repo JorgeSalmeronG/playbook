@@ -1,13 +1,13 @@
-const ExplorersController = require("./../../lib/controllers/ExplorersController");
+const ExplorerController = require("./../../lib/controllers/ExplorerController");
 
 
-describe("Unit tests for ExplorersController class", () =>{
+describe("Unit tests for ExplorerController class", () =>{
 	
     test("1) Test if FiterbyMission Method is correct ",() => {
 
         const mission = "java" 
 
-        const result = ExplorersController.getExplorerByMission(mission);
+        const result = ExplorerController.getExplorerByMission(mission);
         expect(result[0].name).toEqual("woopa6")
     });
 
@@ -15,7 +15,7 @@ describe("Unit tests for ExplorersController class", () =>{
 
         const mission = "java" 
 
-        const result = ExplorersController.getExplorerAmountByMission(mission);
+        const result = ExplorerController.getExplorerAmountByMission(mission);
         expect(result).toBe(5);
     });
 
@@ -23,7 +23,7 @@ describe("Unit tests for ExplorersController class", () =>{
 	
         const mission = "java" 
 
-        const result = ExplorersController.getExplorersUsernamesByMission(mission)
+        const result = ExplorerController.getExplorerUsernamesByMission(mission)
         expect(result[0].username).toEqual("ajolonauta6")
     });
 });
