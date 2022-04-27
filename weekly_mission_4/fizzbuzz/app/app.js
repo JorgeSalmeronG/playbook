@@ -15,9 +15,9 @@ console.log(`Explorers: ${qty} \n Mission: ${mission} \n Gitusernames:\n ${gitUs
 
 fizzbuzz.forEach((item) => console.log(`name: ${item.name}, mission: ${item.mission}, trick: ${item.trick}`));
 
-const data = ExplorerController.getExplorerByMission(mission)
-const user = ExplorerController.getExplorerUsernamesByMission(mission)
-const num = ExplorerController.getExplorerAmountByMission(mission)
-console.log(data)
-console.log(user)
-console.log(num)
+const data = ExplorerController.getExplorerByMission(mission);
+const user = ExplorerController.getExplorerUsernamesByMission(mission);
+const num = ExplorerController.getExplorerAmountByMission(mission);
+console.log(data);
+console.log(user);
+console.log(num);
