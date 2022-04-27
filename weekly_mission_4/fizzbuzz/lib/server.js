@@ -19,3 +19,8 @@ app.get("/v1/explorers/:mission", (request, response) => {
 	response.json(explorersInMission)
 });
 
+app.get("/v1/explorers/amount/:mission", (request, response) => {
+	const mission = request.params.mission;
+	response.json({mission: mission , quantity: ExplorerController.getExplorerAmountByMission(mission)});
+});
+
