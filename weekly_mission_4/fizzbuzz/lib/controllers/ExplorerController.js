@@ -19,7 +19,7 @@ class ExplorerController {
     }
 
     static getFizzbuzzNumber(number){
-        return FizzbuzzService.applyValidationInNumber(number)
+        return FizzbuzzService.applyValidationInNumber(number);
     }
 }
 module.exports = ExplorerController;
