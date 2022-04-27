@@ -8,7 +8,7 @@ describe("Unit tests for ExplorerController class", () =>{
         const mission = "java" 
 
         const result = ExplorerController.getExplorerByMission(mission);
-        expect(result[0].name).toEqual("woopa6")
+        expect(result[0].name).toEqual("Woopa6")
     });
 
     test("2) Test if AmountOfExplorers method is correct ", ()=> {
@@ -24,6 +24,6 @@ describe("Unit tests for ExplorerController class", () =>{
         const mission = "java" 
 
         const result = ExplorerController.getExplorerUsernamesByMission(mission)
-        expect(result[0].username).toEqual("ajolonauta6")
+        expect(result[0]).toEqual("ajolonauta6")
     });
 });
