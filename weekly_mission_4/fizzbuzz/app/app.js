@@ -1,18 +1,14 @@
-const Reader = require("./../lib/utils/Reader")
-const ExplorerService = require("./../lib/services/ExplorerService")
-const FizzbuzzService = require("./../lib/services/FizzbuzzService")
+const Reader = require("./../lib/utils/Reader");
+const ExplorerService = require("./../lib/services/ExplorerService");
+const FizzbuzzService = require("./../lib/services/FizzbuzzService");
 
-const explorers = Reader.readJsonFile("./explorers.json")
-const mission = "node"
+const explorers = Reader.readJsonFile("./explorers.json");
+const mission = "node";
 
-//console.log(explorers)
-//explorersFiltedByMission = ExplorerService.filterByMission(explorers, mission)
-//console.log(explorersFiltedeByMission)
+const qty = ExplorerService.getAmountOfExplorerByMission(explorers, mission );
+const gitUsername = ExplorerService.getExplorersUsernamesByMission(explorers, mission);
+const fizzbuzz = FizzbuzzService.applyValidationInExplorer(explorers,mission);
 
-const qty = ExplorerService.getAmountOfExplorerByMission(explorers, mission )
-const gitUsername = ExplorerService.getExplorersUsernamesByMission(explorers, mission)
-const fizzbuzz = FizzbuzzService.applyValidationInExplorer(explorers,mission)
+console.log(`Explorers: ${qty} \n Mission: ${mission} \n Gitusernames:\n ${gitUsername}`);
 
-console.log(`Explorers: ${qty} \n Mission: ${mission} \n Gitusernames:\n ${gitUsername}`)
-
-fizzbuzz.forEach((item) => console.log(`name: ${item.name}, mission: ${item.mission}, trick: ${item.trick}`))
+fizzbuzz.forEach((item) => console.log(`name: ${item.name}, mission: ${item.mission}, trick: ${item.trick}`));
