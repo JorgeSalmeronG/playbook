@@ -11,3 +11,11 @@ app.get("/", (request, response) => {
 app.listen(port, () => {
     console.log(`FizzBuzz API in localhost:${port}`);
 });
+
+
+app.get("/v1/explorers/:mission", (request, response) => {
+	const mission = request.params.mission;
+	const explorersInMission = ExplorerController.getExplorerByMission(mission)
+	response.json(explorersInMission)
+});
+
