@@ -27,7 +27,7 @@ describe("Unit tests for FizzbuzzService class", () =>{
 
 	test("4) Test if Validation works as expected with multiples of 3 & 5", ()=> {
 
-		const explorers = [{ "name" : "explorer15", "score" : 20}]
+		const explorers = [{ "name" : "explorer15", "score" : 15}]
 		const result = FizzbuzzService.applyValidationInExplorer(explorers)
 		expect(result[0].trick).toBe("FIZZBUZZ")
 	});
