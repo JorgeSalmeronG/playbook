@@ -24,3 +24,7 @@ app.get("/v1/explorers/amount/:mission", (request, response) => {
 	response.json({mission: mission , quantity: ExplorerController.getExplorerAmountByMission(mission)});
 });
 
+app.get("/v1/explorers/usernames/:mission", (request, response) => {
+	const mission = request.params.mission;
+	response.json(ExplorerController.getExplorerUsernamesByMission(mission))
+});
