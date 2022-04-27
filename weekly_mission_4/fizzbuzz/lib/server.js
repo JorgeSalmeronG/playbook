@@ -28,3 +28,8 @@ app.get("/v1/explorers/usernames/:mission", (request, response) => {
     const mission = request.params.mission;
     response.json(ExplorerController.getExplorerUsernamesByMission(mission));
 });
+
+app.get("/v1/fizzbuzz/:number", (request, response) => {
+    const number = request.params.number;
+    response.json({score : number , trick : ExplorerController.getFizzbuzzNumber(number)});
+});
