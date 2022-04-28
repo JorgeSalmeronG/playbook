@@ -4,7 +4,7 @@ const Reader = require("./../utils/Reader");
 
 class ExplorerController {
     static getExplorerByMission(mission){
-        let explorers = Reader.readJsonFile("explorers.json");
+        let explorers = Reader.readJsonFile("./explorers.json");
         return ExplorerService.filterByMission(explorers, mission);
         //return explorersByMission
     }
