@@ -26,12 +26,26 @@ bot.on("message", (msg) => {
     const chatId = msg.chat.id;
     const numberToApplyFb = parseInt(msg.text);
 
+ 
+
     if(!isNaN(numberToApplyFb)){
         const fizzbuzzTrick = ExplorerController.getFizzbuzzNumber(numberToApplyFb);
         const responseBot = `Tu número es: ${numberToApplyFb}. Validación: ${fizzbuzzTrick}`;
         bot.sendMessage(chatId, responseBot);
-    } else {
-        bot.sendMessage(chatId, "Envía un número válido");
+    } 
+	else if(msg.text == "node" || msg.text == "java"){
+		const explorersInMission = ExplorerController.getExplorerUsernamesByMission(msg.text)
+		const explorersTxt = JSON.stringify(explorersInMission)
+		const responseBot = `Los usernames de los explores en la misión ${msg.text} son : ${explorersTxt}`
+		bot.sendMessage(chatId,responseBot);
+	}
+
+	else {
+        bot.sendMessage(chatId, "Envía un número o missión válida (java, node)");
+
     }
+
+
+    
 
 });
